@@ -27,13 +27,6 @@ spec:
         args: ["-e", "const http = require('http'); const server = http.createServer((req, res) => { res.writeHead(200); res.end('Hello from Pod: ' + require('os').hostname() + '\\n'); }); server.listen(3000, '0.0.0.0');"]
         ports:
         - containerPort: 3000
-        resources:
-          requests:
-            memory: "64Mi"
-            cpu: "100m"
-          limits:
-            memory: "128Mi"
-            cpu: "200m"
 ---
 apiVersion: v1
 kind: Service
